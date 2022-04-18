@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="header"></div>
+    <br />
+
+    <h1 style="text-align: center">Read My Reviews <br/>
+    <button ><a href="chefviewprofile" >Back to My Profile</a></button></h1>
+    <br />
+    <div class="box1">
+      <ul>
+        <li>
+          <img
+            src="assets/Images/enrique olvera.jpeg"
+            alt="enrique olvera"
+            style="height: 300px"
+          /><button style="margin-left: 30px;"><a href="Contact">Contact Us</a></button> <br />
+         <br />
+        </li>
+        <li style="width: auto">
+          <h1>Enrique Olvera</h1>
+          <i class="fas fa-map-marker-alt" *ngFor="let data of data"></i>
+          <p>
+            <b>Cooking Experience: </b>
+            <u style="color: darkblue"> {{ data.cook_exp }} </u>Years
+          </p>
+          <p><b>Member Since: </b>{{ data.memb_since | date: "shortDate" }}</p>
+          <p>
+            <b>Received:</b> <u><b style="color: darkblue"> 0 </b></u>Reviews
+          </p>
+          <b style="color: red">★★★★★</b> &nbsp;
+
+          <hr style="font-size: large" />
+          <hr style="font-size: large" />
+          <h3>Review Rating Distribution:</h3>
+          <u> <b style="font-size: 16px; color: red"> 4 </b></u
+          ><span style="color: darkblue">&nbsp; Customers Rated 5 Stars</span
+          ><br />
+          <u> <b style="font-size: 16px; color: red"> 1 </b></u
+          ><span style="color: darkblue">&nbsp; Customers Rated 4 Stars</span
+          ><br />
+          <u> <b style="font-size: 16px; color: red"> 0 </b></u
+          ><span style="color: darkblue">&nbsp; Customers Rated 3 Stars</span
+          ><br />
+          <u> <b style="font-size: 16px; color: red"> 0 </b></u
+          ><span style="color: darkblue">&nbsp; Customers Rated 2 Stars</span
+          ><br />
+          <u> <b style="font-size: 16px; color: red"> 0 </b></u
+          ><span style="color: darkblue">&nbsp; Customers Rated 1 Stars</span
+          ><br />
+        </li>
+        <li style="width: 100px"></li>
+        <li>
+          <h3>Contact Information:</h3>
+          <p style="color: darkblue"><b>☎️ Phone#: </b>{{ data.phone }}</p>
+          <p style="color: darkblue">
+            <b>📧&nbsp; Email: </b>{{ data.emailid }}
+          </p>
+          <p style="color: darkblue">
+            <b>🏠 Food Pickup Address: </b>{{ data.address }}
+          </p>
+          <br />
+          <h4>Payment Method(s):</h4>
+          <P style="color: darkblue">{{ data.payment }} </P>
+          <br />
+        </li>
+      </ul>
+    </div>
+    <br />
+
+    <div class="box2">
+      <ul>
+        <li style="width: 100%; height: auto; text-align: center">
+          <br /><br /><br /><br /><br />
+          <hr />
+          <hr />
+          <br /><br />
+          <b style="font-size: 24px">Customer reviews & ratings &nbsp; </b>
+          <select style="font-size: 18px">
+            <option value="Most recent reviews">Most recent reviews</option>
+            <option value="Most helpful reviews">Most helpful reviews</option>
+            <option value="Review with pictures">Review with pictures</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+    <div class="box1">
+      <ul>
+        <li style="width: 50%; padding-left: 40px">
+          <br /><br /><br />
+          <img
+            src="assets/Images/LisaH.png"
+            alt="Lisa H"
+            style="margin: 0 0 0 50px"
+          />
+          <h3 style="margin: 0 0 0 50px">Lisa H</h3>
+          <p>Reviewed on Feb 15, 2022</p>
+          <!-- <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>  -->
+          <b style="color: red">★★★★★</b>
+          <b> Best Chef Ever!</b>
+
+          <p style="width: 350px; height: auto; text-indent: 25px">
+            Chef Enrique Olvera is definitely one of the best chefs we have ever
+            met. All the dishes he made are so delicous and authentic Mexian
+            cuisine style! The prices are also very reasonale. He respond to my
+            messeges very fast as well. I would recomond him to freinds and
+            familys!
+          </p>
+          <b> <em> 5 people found this helpful! </em></b><br /><button>
+            Helpful
+          </button>
+        </li>
+
+        <li style="width: 50%; padding-left: 60px">
+          <br /><br /><br />
+          <img
+            src="assets/Images/Venessa L.png"
+            alt="Venessa L"
+            style="margin: 0 0 0 50px"
+          />
+          <h3 style="margin: 0 0 0 50px">Venessa L</h3>
+          <p>Reviewed on Feb 12, 2022</p>
+          <!-- <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>  -->
+          <b style="color: red">★★★★★</b> <b>FIVE STAR CHEF!!</b>
+
+          <p style="width: 350px; height: auto; text-indent: 25px">
+            I want to rate Chef Enrique Olvera FIVE stars for his most
+            professional cooking skills and excellent customer services. I had
+            many food allergies. Chef Enrique Olvera was patient to answer my
+            phone calls and helped me to made tasted and nutritious dishes by
+            avoding all the allergic ingredients!
+          </p>
+          <b> <em> 5 people found this helpful! </em></b><br /><button>
+            Helpful
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="box4" style="margin-top: 420px">
+      <a class="next round">🔘</a>
+      <a class="previous round">⚫</a>
+      <a class="next round">🔘</a>
+    </div>
+  </body>
+
+
+
+
+</html>

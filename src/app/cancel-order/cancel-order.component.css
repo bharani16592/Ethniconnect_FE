@@ -1,0 +1,27 @@
+form {border: 3px solid #f1f1f1;
+
+  height: 430px;}
+
+  .button1 {
+    background-color: #F6c515;
+    padding: 40px 10px;
+    margin: 40px 55px;
+    border: none;
+    cursor: pointer;
+    width: 32%;
+    height: 32%;
+    font-size: 19px;
+    
+  }
+  
+
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  span.psw {
+    
+    margin-left: 140px;}
+  
+  span.click {  margin-left: 200px;}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav .search-container {
+          float: none;
+        }
+        .topnav a,
+        .topnav input[type="text"],
+        .topnav .search-container button {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+        }
+        .topnav input[type="text"] {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="terms">
+      <div class="box1">
+        <h1 style="text-align: center">Terms and Conditions of Service</h1>
+        <p style="text-align: center">Last updated: Feb, 10th 2022</p>
+      </div>
+      <div class="box2">
+        <h2>Accessing the Website</h2>
+        <p>
+          These Terms and Conditions of Service (the “Terms and Conditions”) are
+          an agreement between you and the Ethini-Connect Team. Along with our
+          representatives and employees, we provide the website at
+          www.ethni-connect.com. Your use of the Website is subject to these
+          Terms and Conditions, which you acknowledge, agree to and consent to
+          by using the Website. These Terms and Conditions include our Privacy
+          Policy, which is available at www.ethni-connect.com/privacy-policy/
+          and which is hereby incorporated by reference, as well as the Terms
+          and Conditions for Purchases/Subscriptions and the Food Safety
+          Considerations.
+        </p>
+        <p>
+          read these Terms and Conditions carefully before ordering any products
+          from us or subscribing to one of our services. You should print a copy
+          of these Terms and Conditions for future reference. When using the
+          Website, you will be subject to all displayed rules and policies. Such
+          rules and policies are hereby incorporated by reference into these
+          Terms and Conditions. We may also offer other websites that are
+          governed by different terms and conditions.
+        </p>
+        <p>
+          These Terms and Conditions may be amended by us from time to time at
+          our sole discretion. Please periodically review the controlling
+          version of the Terms and Conditions. By continuing to use the Website
+          subsequent to us making available an amended version of the Terms and
+          Conditions, you thereby acknowledge, agree to, and consent to such
+          amendment. You cannot create an account, buy our Products or subscribe
+          to our services without agreeing to these Terms and Conditions.s
+        </p>
+      </div>
+      <div class="box3">
+        <h2>Service Availability</h2>
+        <p>
+          Our Website is intended for use only by people residing in Great
+          Detroit Area, Michigan State. We do not accept orders from individuals
+          outside from the Great Detroit Area, Michigan State.
+        </p>
+        <p>
+          By placing an order through our Website, you warrant that: You are
+          legally capable of entering into binding contracts; You are at least
+          18 years old; You are a resident of the United States; and You are
+          accessing our Website from the United States.
+        </p>
+      </div>
+      <div class="box4">
+        <h2>Product Descriptions</h2>
+        <p>
+          We make reasonable efforts to display, as accurately as possible, the
+          colors of our Products. However, the actual colors you see depend on
+          your monitor or device, and thus we cannot guarantee that the colors
+          of Products you see when viewing the Website will be accurate.
+        </p>
+      </div>
+
+      <div [ngClass]="{ limitTextHeight: isReadMore }">
+        <h2>Accessing the Website</h2>
+        <p>
+          You may access portions of the Website without registering. However,
+          in order to access some portions and features of the Website, and to
+          make purchases, you will be required to register an account with and
+          sign into the Website. <span id="dots"></span
+          ><span id="more"
+            >You are responsible for maintaining the confidentiality of your
+            username, password and other information used to register and sign
+            in to the Website, and you are fully responsible for all activities
+            that occur under this password and username.
+          </span>
+        </p>
+      </div>
+      
+      <button type="button" (click)="showText()">
+        {{ isReadMore ? "Read More" : "Read Less" }}
+      </button>
+    </div>
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<img src="assets/Images/step2.png" alt="foodhome" width="1000px" style="margin-left: 200px; border-radius: 0%">
+
+<!--Rest of the CuisineSelect page-->
+<h3>Pick a cuisine</h3>
+<!--<h3>Select One Type of Cuisine</h3>-->
+<div class="cuisine-container">
+<div *ngFor="let cuisine of cuisines" class="cuisine">
+        
+        <!-- <img class="image1" [name]="cuisine.cuisine_name" src="assets/Images/temporaryFoodImage.png" width="200px" height="200px">-->
+        <img class="image1" [name]="cuisine.cuisine_image" src="data:image/jpeg;base64,{{cuisine.cuisine_image}}"
+            width="200px" height="200px">
+            <div class="cuisine-name">
+                <input type="radio" id="css" name="fav_language" [value]="cuisine.id" (click)="selectCuisine(cuisine.id,cuisine.cuisine_name)">
+                <label class="label" [for]="cuisine.cuisine_name"> {{cuisine.cuisine_name}}</label>
+                <!-- <img class="image1" [name]="cuisine.cuisine_name" src="assets/Images/temporaryFoodImage.png" width="200px" height="200px">-->
+            </div>
+    </div>
+</div>
+    <!--div>
+    <input class="checkbox" type="checkbox" id="mexican" name="mexican" value="mexican">
+    <label class="label" for="mexican"> Mexican</label>
+    <input class="checkbox2" type="checkbox" id="italian" name="italian" value="italian">
+    <label class="label2" for="italian"> Italian</label>
+</div>
+
+<div>
+    <img class="image1" src="assets/Images/Mexican cuisine.png" width="200px" height="200px">
+    <img class="image2" src="assets/Images/italian-food-2000.jpg" width="200px" height="200px">
+</div>
+
+<div>
+    <input class="checkboxMiddleEastern" type="checkbox" id="middleEastern" name="middleEastern" value="middleEastern">
+    <label class="label" for="middleEastern"> Middle Eastern</label>
+    <input class="checkboxIndian" type="checkbox" id="indian" name="indian" value="indian">
+    <label class="label2" for="indian"> Indian</label>
+</div>
+
+<div>
+    <img class="image1" src="assets/Images/temporaryFoodImage.png" width="200px" height="200px">
+    <img class="image2" src="assets/Images/Indian cuisine.png" width="200px" height="200px">
+</div>
+
+<div>
+    <input class="checkboxThai" type="checkbox" id="thai" name="thai" value="thai">
+    <label class="label" for="thai"> Thai</label>
+    <input class="checkbox2" type="checkbox" id="chinese" name="chinese" value="chinese">
+    <label class="label2" for="chinese"> Chinese</label>
+</div>
+
+<div>
+    <img class="image1" src="assets/Images/temporaryFoodImage.png" width="200px" height="200px">
+    <img class="image2" src="assets/Images/temporaryFoodImage.png" width="200px" height="200px">
+</div>
+-->
+
+    <div>
+        <!--<nav>
+   <a class="routing" href="EnterZipCode">Back</a>
+        <a class="routing" href="FindChef">Continue</a>
+    </nav> !-->
+        <nav>
+            <a class="routing" (click)="goToNextStep()">Continue</a>
+        </nav>
+    </div>

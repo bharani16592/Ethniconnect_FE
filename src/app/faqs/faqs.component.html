@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <br />
+
+    <h1 style="text-align: center">Ethni-Connect FAQs</h1>
+    <p style="text-align: center">
+      Please click Part 1 and Part 2 to read the details
+    </p>
+    <br />
+
+    <button
+      type="button"
+      style="font-size: x-large"
+      class="button1"
+      (click)="showText()"
+    >
+      {{
+        isPart1 ? "Part 1: Ethni-Connect FAQs" : "Part 1: Ethni-Connect FAQs"
+      }}
+    </button>
+    <div [ngClass]="{ limitTextHeight: isPart1 }">
+      <h3>Q1. What is Ethni-Connect?</h3>
+      <p>
+        A: Ethni-connect is a user-friendly, quick search platform that provides
+        home-cooked food based on ethnicity.
+      </p>
+      <br />
+      <h3>Q2. What can a registered chef do on Ethni-Connect?</h3>
+      <p>
+        A: A chef can create their weekly menu and display the personalized
+        dishes for customers to purchase.
+      </p>
+      <br />
+      <h3>Q3. Is there a standard quantity that needs to be served?</h3>
+      <p>
+        A: Yes. Detailed information will be shared as part of the on-boarding
+        process.
+      </p>
+      <br />
+      <h3>Q4. Where is the Ethni-Connect office located?</h3>
+      <p>
+        A: Ethni-Connect is designed, developed and conceptualized by students
+        at Oakland university having its head office in Rochester Hills.
+      </p>
+      <br />
+      <h3>Q5. How can I contact Ethni-Connect?</h3>
+      <p>
+        A: You can always reach us to ethniconnect@gmail.com and we will
+        get back to you within 24 hours.
+      </p>
+      <br />
+      <h3>Q6. When will my profile go live?</h3>
+      <p>
+        A: The complete process for a chef profile to go live with their
+        products listed in their area will be 7 to 10 Business days. This
+        completely depends on how quick the profile is completed by the chef and
+        coordination with our chef on-boarding team.
+      </p>
+    </div>
+    <button
+      type="button"
+      style="font-size: x-large"
+      class="button1"
+      (click)="showT()"
+    >
+      {{ isPart2 ? "Part 2: Home-Cooked FAQs " : "Part 2: Home-Cooked FAQs" }}
+    </button>
+    <div [ngClass]="{ limitTextHeight: isPart2 }">
+      <h3>Q1. How can a chef choose the dishes / menu?</h3>
+      <p>
+        A: You can create a list of products that you wish to sell on
+        Ethni-Connect.
+      </p>
+      <br />
+      <h3>Q2. What is a customer request?</h3>
+      <p>
+        A: Ideally, when a customer visits Ethni-connect he or she goes ahead
+        and follows simple steps: Enter Zipcode, select a chef of their choice,
+        check their menu and place an order.
+      </p>
+      <br />
+      <h3>
+        Q3. Can I cook only on Weekdays / Weekends or select the days I want to
+        cook?
+      </h3>
+      <p>
+        A: Yes. When a user finds your listing and contacts you, please make
+        sure to keep them informed on the days you service is active and more
+        importantly keep them informed with prior notice for days that you will
+        not be providing the service.
+      </p>
+      <br />
+      <h3>Q4. What can a registered chef do on Ethni-Connect?</h3>
+      <p>
+        A: A chef can list dishes for purchase & receive custom requests in
+        their respective city and area.
+      </p>
+      <br />
+      <h3>Q5. How is the food packed?</h3>
+      <p>
+        A: Chefs can choose to procure packaging material / containers on their
+        own. If you prefer to have any please add in the special instruction in
+        view your order page.
+      </p>
+      <br />
+      <h3>Q6. How can we decide the cost per dish?</h3>
+      <p>
+        A: Cost per dish will depend on your input cost in making that dish plus
+        your service fee.
+      </p>
+      <br />
+      <h3>Q7. Who delivers the food?</h3>
+      <p>
+        A: Chefs will be responsible to coordinate with the customer directly
+        for organizing delivery or pick up of the food in case of an order.
+      </p>
+      <br />
+      <h3>Q8. How will Ethni-Connect help a chef get customers?</h3>
+      <p>
+        A: Promotions / Marketing campaigns run by Ethni-Connect and its channel
+        partners, high service quality, good food, word-of-mouth and a little
+        bit of chef’s effort will help the chef get orders.
+      </p>
+      <br />
+      <h3>Q9. Is there any contract that Chef’s need to sign?</h3>
+      <p>
+        A: A chef will have to acknowledge and accept our Chef Terms of Use as
+        part of the registration process. A contract that governs terms &
+        conditions such as commissions, payments cycle, acceptance of orders, on
+        time food preparations and other terms will be given to the chef for
+        careful understanding before signing.
+      </p>
+      <br />
+      <h3>Q10. When will a chef get their first order?</h3>
+      <p>
+        A: This depends on a lot of factors like the customer’s taste and
+        preferences, the dishes listed by the chef, its availability, the
+        pricing, ratings & reviews of the chef profile. As customers always look
+        for good ratings & reviews before placing an order, participating in
+        custom requests is the best way to build your profile.
+      </p>
+      <br />
+      <h3>Q11. What defines a “Meal”?</h3>
+      <p>
+        A: The food was served and eaten in one sitting. Detailed information
+        will be shared as part of the on-boarding process.
+      </p>
+    </div>
+
+    <button type="button2" style="font-size: x-large; " class="button1">
+      Part 3: Help Center 
+    </button>
+
+    <div class="content" style="padding: 10px 150px; text-align: center; margin-bottom: -400px;">
+      <br />
+      <h4>
+        &nbsp; &nbsp; &nbsp; If you have any other questions. Please don’t
+        hesitate to reach out with our
+        <a href="Contact" style="color: darkgoldenrod"
+          ><b><em>Contact Us</em></b></a
+        >
+        page , and send a message to us by filling the form.
+      </h4>
+      <br />
+    </div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+/* Rest of the Page Styling */
+
+
+a.orderNum{
+    margin-left: 65%;
+    font-size: 56px;
+    margin-top: 30px;
+    color: black;
+    
+    
+}
+
+a.orderTitle{
+    margin-left: 15%;
+    text-align:center;
+    font-size: 64px;
+    line-height: 300px;
+    color: black;
+
+}
+
+a.chefContact{
+    margin-left: 30%;
+    text-align: center;
+    font-size: 36px;
+    color: black;
+}
+
+ /*Styling router buttons*/
+ a.routing{
+    width:350px;
+    text-align:center;
+    padding: 20px 75px;
+    display: inline-block;
+    margin-top: 200px;
+    margin-left: 21%;
+    color: black;
+    background: #F6c515;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+  }
+
+  a.cancelMsg{
+    margin-left: 15%;
+    text-align: center;
+    font-size: 36px;
+    color: black;
+    position: absolute;
+    bottom: 20px;
+  }

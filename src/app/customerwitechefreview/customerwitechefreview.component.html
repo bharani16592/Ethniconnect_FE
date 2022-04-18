@@ -1,0 +1,196 @@
+<!--Needs to grab order ID from database-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav .search-container {
+          float: none;
+        }
+        .topnav a,
+        .topnav input[type="text"],
+        .topnav .search-container button {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+        }
+        .topnav input[type="text"] {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"></div>
+    <br />
+
+    <h1 style="text-align: center">Write a Review to Our Chef</h1>
+
+    <div class="box1">
+      <ul>
+        <li>
+          <img
+            src="assets/Images/enrique olvera.jpeg"
+            alt="enrique olvera"
+            style="height: 300px"
+          /><button><a href="Contact">Contact Us</a></button> <br />
+          <button><a href="EnterZipCode">Continue Booking</a></button>
+        </li>
+        <li style="width: auto">
+          <h1>Enrique Olvera</h1>
+          <!-- <i class="fas fa-map-marker-alt" *ngFor="let data of data"></i> -->
+          <p>
+            <b>Cooking Experience: </b>
+            <u style="color: darkblue"> </u>Years
+          </p>
+          <p><b>Member Since: </b></p>
+          <p>
+            <b>Received:</b>
+            <b style="color: darkblue">
+              <a href="ViewChef"><u> 0</u></a> </b
+            >Reviews
+          </p>
+          <b style="color: red">★★★★★</b>
+          <hr style="font-size: large" />
+          <hr style="font-size: large" />
+          <h3>Review Rating Distribution:</h3>
+          <u> <b style="font-size: 16px; color: red"> 4 </b></u
+          ><span style="color: darkblue">&nbsp;  Rated 5 Stars</span
+          ><br />
+          <u> <b style="font-size: 16px; color: red"> 1 </b></u
+          ><span style="color: darkblue">&nbsp;  Rated 4 Stars</span
+          ><br />
+          <u> <b style="font-size: 16px; color: red"> 0 </b></u
+          ><span style="color: darkblue">&nbsp;  Rated 3 Stars</span
+          ><br />
+          <u> <b style="font-size: 16px; color: red"> 0 </b></u
+          ><span style="color: darkblue">&nbsp;  Rated 2 Stars</span
+          ><br />
+          <u> <b style="font-size: 16px; color: red"> 0 </b></u
+          ><span style="color: darkblue">&nbsp;  Rated 1 Stars</span
+          ><br />
+        </li>
+        <li style="width: 100px"></li>
+        <li>
+          <h3>Chef's Contact Information</h3>
+          <p style="color: darkblue"><b>☎️ Phone#: </b></p>
+          <p style="color: darkblue">
+            <b>📧&nbsp; Email: </b>
+          </p>
+          <p style="color: darkblue">
+            <b>🏠 Food Pickup Address: </b>
+          </p>
+          <br />
+          <h4>Payment Method(s):</h4>
+          <P style="color: darkblue"> </P>
+        </li>
+      </ul>
+    </div>
+    <br /><br /><br /><br />
+    <div class="box3" style="margin-bottom: -350px;">
+      <ul>
+        <h2 style="text-align: center; color: rgb(260, 200, 40)">
+          Please Leave your Review and Rating Below:
+        </h2>
+        <hr />
+        <hr />
+        <li>
+          <img
+            src="assets/Images/Venessa L.png"
+            alt="Venessa L"
+            style="margin: 10px 0 0 320px"
+          />
+          <h3 style="margin: 0 0 0 310px">Hi, Venessa L !</h3>
+          <span style="margin-left: 210px"
+            >Please selert an overall rating:
+            <select
+              style="font-size: 12px; color: red"
+              name="Rating"
+              id="Rating"
+              [(ngModel)]="reviewstar"
+            >
+              <option value="5 stars ★★★★★">5 stars ★★★★★</option>
+              <option value="4 stars ★★★★">4 stars ★★★★☆</option>
+              <option value="3 stars ★★★">3 stars ★★★☆☆</option>
+              <option value="2 stars ★★">2 stars ★★☆☆☆</option>
+              <option value="1 stars ★">1 stars ★☆☆☆☆</option>
+            </select></span
+          >
+          <br /><br />
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Type your title here (Optional)"
+            size="26"
+            style="
+              font-size: 18px;
+              background-color: lightgray;
+              margin-left: 220px;
+            "
+            required
+            name="title"
+            [(ngModel)]="reviewtitle"
+          />
+          <br />
+          <br />
+          <input
+            type="fooddescription"
+            form="usrform"
+            placeholder="Type your comments here (Required. 2000 charaters maximum)"
+            style="
+              background-color: lightgray;
+              color: gray;
+              width: 720px;
+              height: 350px;
+              line-height: 40px;
+              padding: 0 5px;
+            "
+            required
+            name="review"
+            [(ngModel)]="review"
+          />
+          <!-- <textarea
+            name="fooddescription"
+            form="usrform"
+            style="
+              background-color: lightgray;
+              color: gray;
+              width: 720px;
+              height: 350px;
+            "
+            required
+            name="review"
+            [(ngModel)]="review">
+Type your comments here (Required. 2000 charaters maximum)</textarea
+          > -->
+          <br /><br/>
+          <u style="color: darkblue; margin-left: 320px">Preview|Clear </u>
+          <br />
+          <br />
+          <button (click)="onSubmit()" type="submit" style="margin-left: 200px">Save</button>
+          <button (click)="onSubmit()" type="submit" style="margin-left: 10px">
+            Submit
+          </button>
+          <button style="width: 200px"> <a href=" "></a>Go back to Homepage</button>
+        </li>
+      </ul>
+    </div>
+  </body>
+
+
+
+
+
+</html>

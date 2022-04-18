@@ -1,0 +1,72 @@
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Order Summary: {{viewOrder.orderid}}</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Cusisine</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Chef</th>
+        <th scope="col">Day</th>
+        <th scope="col">Category</th>
+      </tr>
+      </thead>
+      <tbody>    
+        <tr *ngFor="let item of viewOrder.orderItems">
+          <td>{{item.chefMenu.item_name}}</td>
+          <td>{{item.chefMenu.cuisineCategory.cuisine_name}}</td>
+          <td>{{item.chefMenu.menu_item_price | currency: 'USD'}}</td>
+          <td>{{item.quantity}}</td>
+          <td>{{item.chefMenu.chef.chef_fname + " " + item.chefMenu.chef.chef_lname }}</td>
+          <td>{{item.chefMenu.week}}</td>
+          <td>{{item.chefMenu.menucategories}}</td>
+
+        </tr>  
+      </tbody>
+      </table>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+    <div class="header"></div>
+    <br />
+
+    <div class="box1">
+      <h1 style="text-align: center">Your Order History</h1>
+
+      <br />
+      <span style="margin-left: 200px">
+        <b>View your orders placed </b></span
+      >
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Order Id</th>
+          <th scope="col">Date</th>
+          <th scope="col">Price</th>
+          <th scope="col">view order</th>
+          <th scope="col">Cancel</th>
+          <th scope="col">Rate order</th>
+        </tr>
+        </thead>
+        <tbody>    
+          <tr *ngFor="let order of orders">
+            <td>{{order.orderid}}</td>
+            <td>{{order.order_date | date: 'medium'}}</td>
+            <td>{{order.order_amount | currency: 'USD'}}</td>
+            <td class="order-btn"><button class="btn view-order" (click)="showMenuModal(order)">View</button></td>
+            <td class="order-btn"><button class="btn view-order" (click)="cancelOrder()">Request Cancel</button></td>
+            <td><ngb-rating [max]="5" [(rate)]="rating[order.orderid]" (rateChange)="postRating()" (hover)="hovered=$event" (leave)="hovered=0" ></ngb-rating></td>
+          </tr>  
+        </tbody>
+        </table>
+    </div>
+
+
+

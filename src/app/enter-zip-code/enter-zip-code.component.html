@@ -1,0 +1,14 @@
+<img src="assets/Images/step1.png" alt="foodhome" width="1000px" style="margin-left: 200px;" >
+
+<!--Router continue button, still needs to pass zip code-->
+<div class="body" style="margin-bottom: -305px;">
+  <form [formGroup]="zipForm" class="form" id="zipcode">
+    <a class="txt">Please enter your zip code before proceeding </a>
+    <input formControlName="zipCode"  type="number" placeholder="Enter 5-digit Zip Code *" id="zipValue" name="zipValue" required pattern="[0-9]{5}">
+
+    <nav>
+      <a type="submit" (click)="fetchCuisinesForZipCode()" class="continue">Continue</a>
+    </nav>
+  </form>
+</div>
+

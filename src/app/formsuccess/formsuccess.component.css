@@ -1,0 +1,37 @@
+
+    button {
+      background-color: #F6c515;
+      color: black;
+      padding: 14px 20px;
+      margin: 18px 0;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      width: 60%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    
+    
+    span.psw {
+      
+      margin-left: 140px;}
+    
+    span.click {  margin-left: 200px;}
+
+    a.routing {
+      width: 400px;
+      text-align: center;
+      padding: 20px 45px;
+      display: inline-block;
+      margin-top: 20px;
+
+      color: black;
+      background: #f6c515;
+      font-size: 30px;
+      border: none;
+      cursor: pointer;
+    }

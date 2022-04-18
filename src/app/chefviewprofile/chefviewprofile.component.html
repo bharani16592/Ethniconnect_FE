@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1 style="text-align: center">
+      My Profile <br />
+      <button
+        style="color: darkblue; background-color: lightgray; font-size: 12px"
+      >
+        <a href="chefeditprofile">Edit my profile</a>
+      </button>
+    </h1>
+    <br />
+    <div class="box1">
+      <i class="fas fa-map-marker-alt" *ngFor="let data of data"></i>
+      <ul>
+        <li>
+          <img
+            src="assets/Images/{{ data.image.name }}"
+            alt="Chef Profile Picture"
+            style="height: 350px; width: 250px"
+          />
+        </li>
+        <li style="width: auto; margin-left: 50px">
+          <h1>{{ data.firstname }} {{ data.lastname }}</h1>
+          <p><b>Cooking Experience: </b> {{ data.cook_exp }} Years</p>
+          <p><b>Member Since: </b>{{ data.memb_since | date: "shortDate" }}</p>
+          <p>
+            <b>Received:</b> <u><b style="color: darkblue"> 0 </b></u>Reviews
+          </p>
+          <b style="color: red">☆☆☆☆☆</b>
+
+
+
+
+
+          <br /><button><a href="chefviewreview"> See all Reviews</a></button
+          ><br />
+          <button>
+            <a href="Contact"> Contact Us</a></button
+          ><br />
+          <button><a href=" ">Go back to Homepage</a></button>
+          <br />
+        </li>
+
+        <li style="margin-left: 150px">
+          <h3 style="margin-top: 25px">My Contact Information:</h3>
+          <p style="color: darkblue"><b>☎️ Phone#: </b>{{ data.phone }}</p>
+          <p style="color: darkblue"><b>📧 Email: </b>{{ data.emailid }}</p>
+          <p style="color: darkblue">
+            <b>🏠 Food Pickup Address: </b>{{ data.address }}
+          </p>
+          <br />
+          <h3>My Payment Method(s):</h3>
+          <P style="color: darkblue">{{ data.payment }} </P>
+          <button style="font-size: 14px; height: 40px">
+            <b> <a href="OrderSummary"> Check Customer orders</a></b>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <br /><br /><br />
+    <div class="box2">
+      <ul>
+        <li>
+          <button style="font-size: 24px; height: 40px; margin-left: 50px">
+            <b> Edit My Featured Cuisines</b>
+          </button>
+        
+        </li>
+
+        <li>
+          <button style="font-size: 24px; height: 40px; margin-left: 100px">
+            <b><a href="createmenu">Edit My Weekly Food Menu</a></b></button
+          ><br />
+          <br />
+
+
+
+        </li>
+      </ul>
+    </div>
+  </body>
+
+</html>

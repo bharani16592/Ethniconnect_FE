@@ -1,0 +1,32 @@
+<img src="assets/Images/step3.png" alt="foodhome" width="1000px" style="margin-left: 200px">
+<!--Need to replace # with the number of chefs queryed with the -->
+
+<h1>We found {{chefs.length}} chefs in your area!</h1>
+
+<div class="chef-container">
+  <div class="chef" *ngFor="let chef of chefs">
+    <div class="chef-pic">
+      <img class="image1" [name]="chef.chef_image" src="data:image/jpeg;base64,{{chef.chef_image}}" width="200px" height="200px">
+     <!-- <img name="chef.chef_image" src="assets/Images/nancy.png"/>-->
+
+    </div>
+    <div class="chef-details">
+      <div class="title">Chef <span>{{chef.chef_fname + " " + chef.chef_lname | titlecase}}</span></div>
+      <div class="address">
+        {{chef.chef_street + ' ' + chef.chef_city + ', ' + chef.chef_state + ' ' + chef.chef_zip}}
+      </div>
+      <div class="exp">
+        <b>Cooking Experience: {{chef.chef_experience}} y+</b><br/>
+        <ngb-rating [max]="5" [rate]="chef.avgRating ?? 3" [readonly]="true"></ngb-rating><br/>
+        
+        <span class="pay"><b>Method of pay: {{chef.chef_paymode}}</b> </span>
+      </div>
+      <a class="routingChef" [routerLink]="['/SelectMenu', chef.loginid,selectedcuisineCategory]">Select</a>
+    </div>
+  </div>
+</div>
+<div>
+  <nav>
+    <a class="routing" (click)="navigatePreviousPage()">Back</a>
+  </nav>
+</div>

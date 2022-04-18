@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        .topnav .search-container {
+          float: none;
+        }
+        .topnav a,
+        .topnav input[type="text"],
+        .topnav .search-container button {
+          float: none;
+          display: block;
+          text-align: left;
+          width: 100%;
+          margin: 0;
+          padding: 14px;
+        }
+        .topnav input[type="text"] {
+          border: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="privacy">
+      <div class="box1">
+        <h1 style="text-align: center">Privacy Policy</h1>
+        <p style="text-align: center">Last updated: Feb, 10th 2022</p>
+        <P>
+          Protecting your privacy. Improving your online experience. Your trust
+          is very important to us.
+        </P>
+        <P>
+          That’s why we want to be clear and transparent about why we collect
+          information, the information we collect, how we use that information,
+          and the choices you have regarding our use of it. We may also collect,
+          use, and share aggregate or anonymous data that doesn’t identify you.
+          We collect information to save you time and money, and to make your
+          online experience better. The following principles guide us when doing
+          business and provide the foundation of our Privacy Policy. These are:
+        </P>
+        <P>
+          We respect your privacy and are committed to protecting it We’re
+          transparent about how and why we collect information The information
+          we collect helps us provide value to our customers that include
+          savings and enhancing their online experience This Privacy Policy was
+          posted and is effective as of Feb 10th, 2022. However, as our
+          business, the law, or customer needs evolve, we may update this
+          Privacy Policy at any time. You can always view the current Privacy
+          Policy by clicking on the Privacy Policy link at the bottom of our
+          website. By using our website and services, you consent to this
+          Privacy Policy. Our services are provided to U.S. customers, and this
+          Privacy Policy is governed by U.S. legal requirements. If you access
+          our services from outside the U.S., you agree to the application of
+          U.S. law.
+        </P>
+        <P>
+          We’re also committed to ensuring that our communications are
+          accessible to people with disabilities. To make accessibility-related
+          requests, please contact us at support@ethini-connect.com.
+        </P>
+      </div>
+      <div class="box2">
+        <h2>Why We Collect Your Information</h2>
+        <P
+          >Below are examples of how we collect, use, and share data to help us
+          create a better, safer experience on our website and mobile
+          applications.</P
+        >
+      </div>
+      <div class="box3">
+        <h3>Product Descriptions</h3>
+        <p>
+          Our Website is intended for use only by people residing in Great
+          Detroit Area, Michigan State. We do not accept orders from individuals
+          outside from the Great Detroit Area, Michigan State.
+        </p>
+        <p>
+          By placing an order through our Website, you warrant that: You are
+          legally capable of entering into binding contracts; You are at least
+          18 years old; You are a resident of the United States; and You are
+          accessing our Website from the United States.
+        </p>
+      </div>
+
+      <div [ngClass]="{ limitTextHeight: isReadMore }">
+        <div class="box4">
+          <h3>To Communicate</h3>
+          <p>
+            We make reasonable efforts to display, as accurately as possible,
+            the colors of our Products. However, the actual colors you see
+            depend on your monitor or device, and thus we cannot guarantee that
+            the colors of Products you see when viewing the Website will be
+            accurate.
+          </p>
+        </div>
+        <div class="box5">
+          <h3>To Protect</h3>
+          <p>
+            Processing payments securely and orders correctly.
+            <span id="dots"></span
+            ><span id="more"
+              >Safeguarding the property or other rights of our customers,
+              associates, and the company. To detect security incidents, protect
+              against malicious, deceptive, fraudulent, or illegal activity, and
+              prosecute those responsible for that activity. Legal compliance
+              for purchase of certain products or where otherwise required by
+              law.
+            </span>
+          </p>
+        </div>
+      </div>
+      <button type="button" (click)="showText()">
+        {{ isReadMore ? "Read More" : "Read Less" }}
+      </button>
+    </div>
+
+  </body>
+</html>

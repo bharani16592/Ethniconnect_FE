@@ -1,0 +1,42 @@
+body {
+    margin: 0px 300px;
+  }
+  .box1 {
+    width: 980px;
+    margin: auto;
+    height: 350px;
+  }
+  
+  .box1 li {
+    list-style: none;
+    float: left;
+    width: 230px;
+    height: 350px;
+  }
+  
+  
+
+  button {
+    margin: 10px 0 0 0;
+    background-color: rgb(260, 200, 40);
+    height: 30px;
+    border-radius: 10%;
+    font-size: 14px;
+  }
+  
+  select {
+    border: rgb(260, 200, 40, 0.6) solid;
+  }
+  form {border: 3px solid #f1f1f1;
+
+    height: auto; 
+  }
+
+
+  input[type=text], input[type=date], input[type=tel] , input[type=email] {  padding: 10px 10px;}
+
+  label {font-size: large;}
+
+
+
+

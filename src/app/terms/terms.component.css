@@ -1,0 +1,17 @@
+.terms {
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+  
+  button {
+    background-color: rgb(253, 200, 50);
+    height: 40px;
+  }
+  .moreText {
+    display: none;
+  }
+
+  .limitTextHeight {
+    height: 20px;
+    overflow: hidden;
+}

@@ -1,0 +1,46 @@
+.box1 {
+    width: 1000px;
+    margin: auto;
+  }
+  input[type="text"] {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+  }
+  .box1 li {
+    list-style: none;
+    float: left;
+  }
+  
+  
+  .box2 {
+    width: 1200px;
+    margin: auto;
+    height: 350px;
+  }
+  
+  .box2 li {
+    list-style: none;
+    float: left;
+    width: 25%;
+  }
+  
+  select {
+    margin-top: 10px;
+    margin-left: 25%;
+    border: rgb(260, 200, 40, 0.6) solid;
+  }
+  
+  table {
+    margin-left: 200px;
+    height: 60px;
+    border: darkgrey solid;
+    border-radius: 8%;
+  }
+  
+  th {
+    width: 100px;
+    background-color: lightgray;
+  }
+
+  p {font-size: 30px;}

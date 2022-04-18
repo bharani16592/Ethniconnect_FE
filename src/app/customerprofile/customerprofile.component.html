@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <h1 style="text-align: center">
+    My Profile <br />
+    <button style="color: darkblue; background-color: lightgray; font-size: 12px">
+      <a href="CustomerEditProfile">Edit my profile</a>
+    </button>
+  </h1>
+  <br />
+  <div class="box1">
+    <i class="fas fa-map-marker-alt" *ngFor="let data of data"></i>
+    <ul>
+      <li>
+        <!-- <img src="assets/Images/isasiah.png" alt="enrique olvera" style="height:200px"> -->
+        <img src="assets/Images/{{ data.image.name }}" alt="Customer Profile Picture"
+          style="height: 350px; width: 250px">
+      </li>
+      
+      <li style="width: auto; margin-left: 50px">
+
+       
+        <p style="color: darkblue"><b> First Name: </b>{{ data.firstName }} </p>
+        <p style="color: darkblue"><b> Last Name: </b>{{ data.lastName }} </p>
+        <p style="color: darkblue"><b> Street Address: </b>{{ data.street}}
+        <p style="color: darkblue"><b> City: </b>{{ data.city}}
+        <p style="color: darkblue"><b> State: </b>{{ data.state}}  
+        <p style="color: darkblue"><b> Zip Code: </b>{{ data.zip}}
+        </p>
+
+
+        <button><a href=" ">Go back to Homepage</a></button>
+        <br />
+      </li>
+<li 
+  style="width: auto; margin-left: 140px">
+  <h3 style="margin-top: 25px">My Contact Information:</h3>
+  <p style="color: darkblue"><b>☎️ Phone#: </b>{{ data.phone }}</p>
+  <p style="color: darkblue"><b>📧 Email: </b>{{ data.emailid }}</p>
+  </li>
+    </ul>
+  </div>
+  <br /><br /><br />
+  <div class="box2">
+    <ul>
+      <li>
+        <button style="font-size: 24px; height: 40px; margin-left: 50px">
+          <b> <a href="EnterZipCode">Place an Order </a></b>
+        </button>
+    
+      </li>
+
+      <li>
+        <button style="font-size: 24px; height: 40px; margin-left: 100px">
+          <b><a href="OrderHistory">View Order History</a></b></button><br />
+        <br >
+
+
+
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>

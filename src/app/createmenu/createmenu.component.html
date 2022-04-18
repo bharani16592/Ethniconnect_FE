@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+ 
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="box1">
+    <ul>
+      <li>
+        <li style="margin-left: 190px;">
+   
+          <p style="font-size:  30px; margin-top: 60px; margin-left: 90px "> <b>Select a cuisine and add your menu</b></p>
+    </li>
+    <li style="margin-left: 236px;">
+
+
+<select name="CuisineSelection" (change)="cuisineUpdate()" [(ngModel)]="activeCuisineId" placeholder style="font-size: 32px;font-weight: bold; text-align: center;">
+  <option value="none" selected disabled hidden>Choose a cuisine</option>
+  <option *ngFor="let cus of cuisines" [value]="cus.id">{{cus.cuisine_name}}</option>
+</select>
+<br><br>
+  <h1  style="margin-left: 10px; text-align: center; color: rgb(260, 200, 40);">Weekly Meal Menu</h1>
+      <p style="margin-left: 100px;font-size: 14px;">Fresh, delicious, convenient, customized, cost-effective, home-cooked foods</p>
+  </li>
+
+<table >
+<tr style="font-size: 20px;border: 2px;">
+  <th *ngFor = "let column of daysInAWeek" (click)="updateActiveDay(column)" [style.background-color]="column==activeDay? 'rgb(260, 200, 40)': ''" >
+      {{column}}
+  </th>
+</tr>
+</table>
+
+<br>
+
+<h1 style="margin-left: 100px; text-align: center;">Please add the menu</h1>
+</ul>
+</div>
+
+<div class="box2" [formGroup]="myformGroup" >
+  <div formArrayName="breakfast">
+    <li><br><br><br><h2 Style="text-align: center; color:green" >Breakfast</h2></li>
+    <div *ngFor="let cont of breakfast.controls; let i=index">
+            <form [formGroupName]="i" >
+              <li>
+                <!-- <img src="assets/Images/Add Photo.png" alt="add photo" style="height:150px; " ><br><br> -->
+                <div class="imagePreview" *ngIf="cont.get('menu_item_image')?.value" >
+                  <img [src]="cont.get('menu_item_image')?.value" height="100px" width="100px">
+                </div>
+                <input type="file" (change)="showPreview($event,'breakfast',i)" formControlName="menu_item_image" name="" id="">
+                <input formControlName="item_name" type="text" id="foodname" name="foodname" placeholder="Name of food" size="10" style="font-size: 14px; background-color:lightgray; float: left;text-align: center;">
+                <input formControlName="menu_item_price" type="number" min="1" id="prize" name="prize" placeholder="Price $" size="8" style="font-size: 14px; background-color:lightgray; margin-left: 10px;float: left; text-align: center;"><br><br>
+                <textarea formControlName="item_ingredients" name="item_ingredients" form="usrform" style="background-color:lightgray; color: gray;" placeholder="Enter food Ingredients here..." ></textarea>
+                <textarea formControlName="item_intresting_facts" name="fooddescription" form="usrform" style="background-color:lightgray; color: gray;" placeholder="Enter food Interesting Facts here..."></textarea>
+
+              </li>
+            </form>
+    </div>
+ </div>
+</div>
+
+<div class="box2" [formGroup]="myformGroup" >
+  <div formArrayName="lunch">
+    <li><br><br><br><h2 Style="text-align: center; color:green" >Lunch</h2></li>
+    <div *ngFor="let cont of lunch.controls; let i=index">
+            <form [formGroupName]="i" >
+              <li>
+                                <!-- <img src="assets/Images/Add Photo.png" alt="add photo" style="height:150px; " ><br><br> -->
+                                <div class="imagePreview" *ngIf="cont.get('menu_item_image')?.value" >
+                                  <img [src]="cont.get('menu_item_image')?.value" height="100px" width="100px">
+                                </div>
+                                <input type="file" (change)="showPreview($event,'lunch',i)" formControlName="menu_item_image" name="" id="">
+                <input formControlName="item_name" type="text" id="foodname" name="foodname" placeholder="Name of food" size="10" style="font-size: 14px; background-color:lightgray; float: left;text-align: center;">
+                <input formControlName="menu_item_price" type="number" min="1" id="price" name="price" placeholder="Price $" size="8" style="font-size: 14px; background-color:lightgray; margin-left: 10px;float: left; text-align: center;"><br><br>
+                <textarea formControlName="item_ingredients" name="fooddescription" form="usrform" style="background-color:lightgray; color: gray;" placeholder="Enter food Ingredients here..." ></textarea>
+                <textarea formControlName="item_intresting_facts" name="fooddescription" form="usrform" style="background-color:lightgray; color: gray;" placeholder="Enter food Interesting Facts here..."></textarea>
+              </li>
+            </form>
+    </div>
+ </div>
+</div>
+
+
+<div class="box2" [formGroup]="myformGroup" >
+  <div formArrayName="dinner">
+    <li><br><br><br><h2 Style="text-align: center; color:green" >Dinner</h2></li>
+    <div *ngFor="let cont of dinner.controls; let i=index">
+            <form [formGroupName]="i" >
+              <li>
+                               <!-- <img src="assets/Images/Add Photo.png" alt="add photo" style="height:150px; " ><br><br> -->
+                               <div class="imagePreview" *ngIf="cont.get('menu_item_image')?.value" >
+                                <img [src]="cont.get('menu_item_image')?.value" height="100px" width="100px">
+                              </div>
+                              <input type="file" (change)="showPreview($event,'dinner',i)" formControlName="menu_item_image" name="" id="">
+                <input formControlName="item_name" type="text" id="foodname" name="foodname" placeholder="Name of food" size="10" style="font-size: 14px; background-color:lightgray; float: left;text-align: center;">
+                <input formControlName="menu_item_price" type="number" min="1" id="prize" name="price" placeholder="Price $" size="8" style="font-size: 14px; background-color:lightgray; margin-left: 10px;float: left; text-align: center;"><br><br>
+                <textarea formControlName="item_ingredients" name="fooddescription" form="usrform" style="background-color:lightgray; color: gray;" placeholder="Enter food Ingredients here..." ></textarea>
+                <textarea formControlName="item_intresting_facts" name="fooddescription" form="usrform" style="background-color:lightgray; color: gray;" placeholder="Enter food Interesting Facts here..."></textarea>
+            </form>
+    </div>
+ </div>
+</div>
+
+
+
+<div style="margin-bottom: -400px">   
+
+<button type="submit" (click)="addMenu()" style="text-align: center; text-decoration: none; margin-left: 600px; background-color: rgb(260, 200, 40); height: 60px;width: 100px; border-radius: 10%; font-size: 18px;" type="submit" value="Submit"><a href ="chefviewprofile"></a><a> Submit</a></button> <br> 
+</div>
+<br><br>
+  </body>
+</html>

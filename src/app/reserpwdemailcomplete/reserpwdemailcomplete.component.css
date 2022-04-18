@@ -1,0 +1,36 @@
+form {border: 3px solid #f1f1f1;
+
+    height: auto;}
+    
+    
+    input[type=text], input[type=password] {
+      
+      padding: 12px 20px;
+      margin: 19px;
+      margin-left: 70px;
+      display: inline-block;
+      border: 1px solid #ccc;
+    
+    }
+    
+    button {
+      background-color: #F6c515;
+      color: white;
+      padding: 14px 20px;
+      margin: 18px 0;
+      border: none;
+      cursor: pointer;
+      width: 50%;
+    }
+    
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    
+    
+    span.psw {
+      
+      margin-left: 140px;}
+    
+    span.click {  margin-left: 200px;}

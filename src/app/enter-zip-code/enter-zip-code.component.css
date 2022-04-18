@@ -1,0 +1,82 @@
+/* ***** Rest of the Chef Zip Code Prompt Page ***** */
+    
+    /*Starts circles near center*/
+    .progressCircle{
+        margin-left: 10%;
+        }
+    
+        /*Formats Current Circle*/
+       .progressCircle a.current{
+        margin: 25px;
+        line-height: 250px;
+        border-radius: 50%;
+        font-size: 15px;
+        color: #000;
+        text-align: center;
+        background: #F6c515;
+        padding: 75px 50px;
+        border-style:outset;
+       } 
+    
+       /*Formats non-Current Circles*/
+       .progressCircle a.notCurrent{
+        margin: 25px;
+        line-height: 250px;
+        border-radius: 50%;
+        font-size: 15px;
+        color: #808080;
+        text-align: center;
+        background: #dbdada;
+        padding: 75px 50px;
+        border-style:outset;
+       } 
+    
+       /* Body for prompt box */
+       .body{
+           overflow: hidden;
+           background-color:#dbdada;
+           width: 900px;
+           height: 500px;
+           margin-left: 19%;
+           padding-left: 50px;
+           padding-right: 50px;
+           border-style:groove;
+           border-color:black;
+       }
+       
+       /*Formating for Chef Zip code Prompt Text*/
+       .body a.txt{
+           text-align: center;
+           line-height: 250px;
+           font-size: 37px;
+           
+       }
+    
+       /* Bar for entering zip code */
+       .body input[type=number] {
+        padding: 6px;
+        margin-top: 8px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 40px;
+        border: none;
+        color: red;
+      }
+    
+      /* Routing button styling */
+      
+      .body a.continue{
+        width:300px;
+        text-align:center; 
+        padding: 20px 50px;
+        display: block;
+        margin-top: 75px;
+        margin-left: auto;
+        margin-right: auto; 
+        color: black;
+        background: #F6c515;
+        font-size: 30px;
+        border: none;
+        cursor: pointer;
+      }

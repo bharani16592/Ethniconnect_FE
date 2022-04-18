@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+</head>
+
+<body>
+    <br />
+    <h1 style="text-align: center">Update Your Personal Profile</h1>
+    <br />
+    <form class="form" id="login" style="margin-top: 10px">
+        <br />
+        <div class="box1">
+            <ul>
+                <li>
+                    <label for="Name"><b>First Name:</b></label>&nbsp;
+                    <input type="text" style="width: 120px" placeholder="First Name" required name="firstname"
+                        [(ngModel)]="firstName"><br><br>
+
+                        <div *ngIf="fError" style="color: red;">*input is invalid</div>
+
+                    <label for="Name"><b>Last Name:</b></label>&nbsp;
+                    <input type="text" style="width: 120px" placeholder="Last Name" required name="lastname"
+                        [(ngModel)]="lastName"><br><br>
+   <div *ngIf="lError" style="color: red;">*input is invalid</div>
+
+
+                    <label for="Phone#"><b>Phone Number: </b></label>
+                    <input type="tel"  style="width: 110px" id="phone" name="phone" placeholder="123-456-7890"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required name="phone" [(ngModel)]="phone"><br>
+                        <div *ngIf="pError" style="color: red;">*input is invalid</div>
+                        
+                    <br><b><label for="email"> Email:</label> </b>&nbsp;
+                    <input type="email" style="width: 160px" id="Email" placeholder="Enter email address" required name="emailid"
+                        [(ngModel)]="emailid">
+
+                        <div *ngIf="emailError" style="color: red;">*input is invalid</div>
+
+
+                    <br>
+                    <br><br>
+                </li>
+                <li style="width: auto; margin-left: 140px">
+                    <label for="street"><b>Street:</b></label>&nbsp;
+                    <input type="text" id="street" name="street" placeholder="Enter your street address" required
+                        name="address" [(ngModel)]="street"><br><br>
+                        <div *ngIf="aError" style="color: red; margin-top: -10px; margin-bottom: 15px;">*input is invalid</div>
+
+                    <label for="city"><b>City: </b></label>&nbsp;
+                    <input type="text" id="city" name="city" placeholder="Enter City" required name="city"
+                        [(ngModel)]="city">
+                        <div *ngIf="cError" style="color: red; margin-top: 10px; ">*input is invalid</div><br><br>
+
+                    <label for="state"><b>State:</b></label>&nbsp;
+                    <input type="text" id="state" name="state" placeholder="Enter State" required name="state"
+                        [(ngModel)]="state">
+                        <div *ngIf="sError" style="color: red;margin-top: 10px;">*input is invalid</div><br><br>
+
+                    <label for="zip"><b>Zip Code:</b></label>&nbsp;
+                    <input type="text" id="zip" name="zip" placeholder="Enter Zip Code" required name="zip"
+                    [(ngModel)]="zip"><br><br>
+                    <div *ngIf="zError" style="color: red;margin-top: -10px; margin-bottom: 15px;">*input is invalid</div>
+
+
+                    <input type="file" (change)="onFileChange($event)">
+                    <img *ngFor="let url of images" [src]="url" height="150" width="200px" style="margin: 3px">
+
+
+
+
+
+
+                </li>
+            </ul>
+        </div>
+        <br />
+        <button (click)="onSubmit()" type="submit" value="Save profile" style="
+          color: black;
+          float: right;
+          width: auto;
+          height: auto;
+          font-size: 25px;
+          border-radius: 12%;
+          margin-top: 50px;
+          margin-right: 350px;
+        ">
+            Save Profile
+        </button>
+    </form>
+    <script>
+        function myFunction() {
+            document.getElementById("Email").placeholder = "Your email address";
+        }
+    </script>
+</body>
+
+
+
+</html>
