@@ -38,21 +38,28 @@
               required
               name="lastname"
               [(ngModel)]="lastName"
-            /><br />            
-            <div *ngIf="lError" style="color: red;">*input is invalid</div>
+            /><br />  
+            <div *ngIf="fError" style="color: red;">*input is invalid</div>
             <br />
             <br />
-            <input type="file" (change)="onFileChange($event)" />
+                      
+           <!--  <div *ngIf="lError" style="color: red;">*input is invalid</div>
+            <br />
+            <br />
+            <div class="imagePreview" *ngIf="cont.get('image')?.value" >
+
+             <input type="file" (change)="onFileChange($event)" />
             <img
               *ngFor="let url of images"
-              [src]="url"
+              [src]="cont.get('image')?.value" height="100px" width="100px"
               height="150"
               width="200px"
               style="margin: 3px"
             />
+          </div>
             <br />
-            <br /><br />
-            <label for="Name"><b>My Payment Method(s):</b></label>
+            <br /><br /> -->
+            <!--<label for="Name"><b>My Payment Method(s):</b></label>
             <select
               name="PaymentMethod(s)"
               id="PaymentMethod(s)"
@@ -64,7 +71,7 @@
               <option value="Credit card (currently unavailable)">
                 Credit Card (currently unavailable)
               </option>
-            </select>
+            </select> -->
           </li>
           <li style="width: auto; margin-left: 140px">
             <label for="Address"><b>Address:</b></label
@@ -95,9 +102,6 @@
             <div *ngIf="cError" style="color: red;">*input is invalid</div>
             <br />
             <br />
-            <label for="date"><b>Member Since: </b></label>&nbsp;
-            <input type="date" id="date" name="date" /><br /><br />
-
             <label for="Phone#"><b>Phone Number: </b></label>&nbsp;
             <input
               type="tel"
@@ -112,7 +116,7 @@
             <div *ngIf="pError" style="color: red;">*input is invalid</div>
             <br />
             <br />
-            <b><label for="email"> Email:</label> </b>&nbsp;
+            <!-- <b><label for="email"> Email:</label> </b>&nbsp;
             <input
               type="email"
               id="Email"
@@ -120,8 +124,8 @@
               required
               name="emailid"
               [(ngModel)]="emailid"
-            />
-            <div *ngIf="emailError" style="color: red;">*input is invalid</div>
+            /> -->
+            <!-- <div *ngIf="emailError" style="color: red;">*input is invalid</div> -->
             <br />
           </li>
         </ul>

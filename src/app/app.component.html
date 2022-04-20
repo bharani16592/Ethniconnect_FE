@@ -7,19 +7,28 @@
 
 
   <div class="dropdown">
-    <button class="dropbtn "> <a routerLink="/homecookedfood">Services</a> </button>
+    <button class="dropbtn "> <a *ngIf="!loggedIn()" routerLink="/homecookedfood">Services</a> </button>
     <div class="dropdown-content">
-      <a routerLink="/EnterZipCode"> Order Food</a><br>
-      <a routerLink="/chefsignup1">Register as a Chef</a>
+      <a *ngIf="loggedIn() && (!isChef())" routerLink="/EnterZipCode"> Order Food</a><br>
+      <a *ngIf="!loggedIn()" routerLink="/chefsignup1">Register as a Chef</a>
     </div>
   </div>
   <a *ngIf="loggedIn() && (!isChef())" routerLink="/OrderHistory" >My Orders</a>
+ <!--  <a *ngIf="loggedIn() && (isChef())" routerLink="/chefeditprofile" >Edit My Profile</a> -->
   <a routerLink="About">About Us</a>
   <a routerLink="Contact">Contact Us</a>
 
   <div class="topnav-left">
     <a *ngIf="!loggedIn()" routerLink="Login" style="margin-right: 100px;">Log-In/Sign-Up</a>
-    <a *ngIf="loggedIn()" (click)="logOut()" style="margin-right: 100px;">Log-Out</a>
+   <a *ngIf="loggedIn() &&(!isChef())" (click)="logOut()" style="margin-right: 100px;">Log-Out</a> 
+    <div class="dropdown">
+      <button class="dropbtn "> <a *ngIf="loggedIn() && (isChef())" routerLink="/homecookedfood" style="margin-right: 100px;">My Account</a> </button>
+      <div class="dropdown-content">
+        <a *ngIf="loggedIn() && (isChef())" routerLink="/chefeditprofile" style="margin-right: 100px;"> Edit Profile</a><br>
+        <a *ngIf="loggedIn() && (isChef())" routerLink="/createmenu" style="margin-right: 100px;">Create Menu</a><br>
+        <a *ngIf="loggedIn()" (click)="logOut()" style="margin-right: 100px;">Log-Out</a>
+      </div>
+    </div>
 
     <div class="search-container">
       <form action="/action_page.php">

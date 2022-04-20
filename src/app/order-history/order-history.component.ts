@@ -55,7 +55,7 @@ export class OrderHistoryComponent implements OnInit {
   }
 
   cancelOrder() {
-    alert('Please reach out to the chef for order cancellation')
+    alert('Please read the cancellation policy and reach out to the customer support @313-3357573 for order cancellation or send an email to the chef')
   }
 
 }
