@@ -9,7 +9,7 @@
   <div class="dropdown">
     <button class="dropbtn "> <a *ngIf="!loggedIn()" routerLink="/homecookedfood">Services</a> </button>
     <div class="dropdown-content">
-      <a *ngIf="loggedIn() && (!isChef())" routerLink="/EnterZipCode"> Order Food</a><br>
+      <a *ngIf="!loggedIn()" routerLink="/EnterZipCode"> Order Food</a><br>
       <a *ngIf="!loggedIn()" routerLink="/chefsignup1">Register as a Chef</a>
     </div>
   </div>
@@ -20,7 +20,7 @@
 
   <div class="topnav-left">
     <a *ngIf="!loggedIn()" routerLink="Login" style="margin-right: 100px;">Log-In/Sign-Up</a>
-   <a *ngIf="loggedIn() &&(!isChef())" (click)="logOut()" style="margin-right: 100px;">Log-Out</a> 
+   <a *ngIf="loggedIn()  && (!isChef())" (click)="logOut()" style="margin-right: 100px;">Log-Out</a> 
     <div class="dropdown">
       <button class="dropbtn "> <a *ngIf="loggedIn() && (isChef())" routerLink="/homecookedfood" style="margin-right: 100px;">My Account</a> </button>
       <div class="dropdown-content">

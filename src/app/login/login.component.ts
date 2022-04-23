@@ -55,8 +55,8 @@ export class LoginComponent implements OnInit {
       } ,
       error: err=>{
         console.log(err)
-        alert('Please enter the correct details')
-        //alert(err.error.errormessage)
+       // alert('Please enter the correct details')
+        alert(err.error.errormessage)
       }
    });
   }
