@@ -1,66 +1,63 @@
-  <div class="container" style="margin-top: 45px">
-    <div class="col-md" style="text-align: center">
+<div class="container" style="margin-top: 45px">
+  <div class="col-md" style="text-align: center">
 
-      <h2>Welcome to your free acccount!</h2><br>
-      <h3>Please finish the following the steps to set your account!</h3>
-    </div>
+    <h2>Welcome to your free acccount!</h2><br>
+    <h3>Please finish the following the steps to set your account!</h3>
   </div>
+</div>
 
-  <div class="container">
-    <div class="col-md-6 col-md-offset-3">
+<div class="container">
+  <div class="col-md-6 col-md-offset-3">
+      <br />
+      <form [formGroup]="registerForm">
         <br />
-        <form [formGroup]="registerForm">
-          <br />
-          <h2 style="text-align: center; font-size: medium">
-            Enter your email and create a password.
-          </h2>
-  
-          <input formControlName="email"   type="email" style="margin-top: 2px; width: 80%" placeholder="Email*" required/>
-          <span *ngIf="registerForm.controls['email'].errors">
-            <span
-              *ngIf="registerForm.controls['email'].errors['required']  && submitted"
-              class="registerFormError">
-              {{'Email is Required'}}
-            </span>
-            <span
-            *ngIf="registerForm.controls['email'].errors['email']  && submitted"
+        <h2 style="text-align: center; font-size: medium">
+          Enter your email and create a password.
+        </h2>
+
+        <input formControlName="email"   type="email" style="margin-top: 2px; width: 80%" placeholder="Email*" required/>
+        <span *ngIf="registerForm.controls['email'].errors">
+          <span
+            *ngIf="registerForm.controls['email'].errors['required']  && submitted"
             class="registerFormError">
-            {{'Enter a Valid Email'}}
+            {{'Email is Required'}}
+          </span>
+          <span
+          *ngIf="registerForm.controls['email'].errors['email']  && submitted"
+          class="registerFormError">
+          {{'Enter a Valid Email'}}
+        </span>
+      </span>
+
+        <input formControlName="password"  type="password" style="margin-top: 10px; width: 80%" placeholder="Create Password*" required/>
+        <span *ngIf="registerForm.controls['password'].errors">
+          <span
+            *ngIf="registerForm.controls['password'].errors['required'] && ((submitted && !registerForm.controls['password'].touched))"
+            class="registerFormError">
+            {{'Password is Required'}}
           </span>
         </span>
-  
-          <input formControlName="password"  type="password" style="margin-top: 10px; width: 80%" placeholder="Create Password*" required/>
-          <span *ngIf="registerForm.controls['password'].errors">
-            <span
-              *ngIf="registerForm.controls['password'].errors['required'] && ((submitted && !registerForm.controls['password'].touched))"
-              class="registerFormError">
-              {{'Password is Required'}}
-            </span>
+
+        <input formControlName="confirmPassword" type="password" style="margin-top: 2px; width: 80%" placeholder="Confirm Password*" required/>
+        <span *ngIf="registerForm.controls['confirmPassword'].errors || registerForm.controls['confirmPassword'].value">
+          <span
+            *ngIf="registerForm.controls['confirmPassword'].value!==registerForm.controls['password'].value  && submitted"
+            class="registerFormError">
+            {{'Passwords Should Match'}}
           </span>
-  
-          <input formControlName="confirmPassword" type="password" style="margin-top: 2px; width: 80%" placeholder="Confirm Password*" required/>
-          <span *ngIf="registerForm.controls['confirmPassword'].errors || registerForm.controls['confirmPassword'].value">
-            <span
-              *ngIf="registerForm.controls['confirmPassword'].value!==registerForm.controls['password'].value  && submitted"
-              class="registerFormError">
-              {{'Passwords Should Match'}}
-            </span>
-          </span>
-  
-          <button type="submit" (click)="signup()" style="margin-left: 150px">
-          Next
-          </button>
-  
-        </form>
-      <a routerLink="/">
-        <button style="width: auto; margin-left: 150px">
-          Click here if you would like to return to the home page
+        </span>
+
+        <button type="submit" (click)="signup()" style="margin-left: 150px">
+        Next
         </button>
-      </a>
-    </div>
-    
-    
-    
-    
-    
+
+      </form>
+    <a routerLink="/">
+      <button style="width: auto; margin-left: 100px">
+        Click here if you would like to return to the home page
+      </button>
+    </a>
   </div>
+  
+  
+</div>
